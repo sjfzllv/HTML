@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validitystate</title>
+</head>
+<body>
+    
+    <form action="" method="get">
+
+        <input type="text" name="username" id="username" placeholder="请输入" required="required" pattern="^d{4}$">
+
+        <input type="text" id="test" name="test" value="" maxlength="5" minlength="2">
+
+        <input type="number" id="number" value="0" max=5 min=2>
+
+        <input type="email" id="email" value="">
+
+        <input type="submit" value="提交">
+    </form>
+
+
+    <script type="text/javascript">
+
+        var usernames = document.getElementsById("username");
+        console.log(usernames.validity)
+
+        console.log(username.validity)
+        //简写（直接用ID期待这个名字document.getElementById），这种写法不推荐使用，因为容易造成混淆！
+
+
+        console.log(username.validity.valueMissing)
+
+
+        //valid - 是否通过了验证（以下 8 个值）
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    input[type="search"]::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        background-color: red;
+        /* 如果是在手机端，改成一个grv的绝对定位，电脑上绝对没问题，不推荐使用这种方式 */
+    }
+
+</style>
+<body>
+
+    <form action="">
+
+        <input type="text" id="username" value="" pattern="\d{5}">
+
+        <input type="search" id="search" value="ssdfdf">
+
+        <input type="submit">
+
+    </form>
+
+    <script>
+        //console.log(document.getElementById("username")===username);
+
+        console.log(username.validity);
+
+        console.log(search.validity)
+
+        
+
+    </script>
+
+</body>
+</html>
+
+<!-- 
+    链接：
+        谈谈css的伪类和伪元素：https://www.haorooms.com/post/css_wl_wys
+ -->

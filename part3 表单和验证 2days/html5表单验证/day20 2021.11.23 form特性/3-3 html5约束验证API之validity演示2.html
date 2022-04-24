@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    input[type="search"]::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        background-color: red;
+    }
+
+    /* 如果想去掉input type="number"右方的上下箭头 */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+</style>
+<body>
+
+    <form action="">
+
+        <input type="text" id="username" value="" pattern="\d{5}">
+
+        <input type="search" id="search" value="ssdfdf">
+
+        <!-- type="number"时，maxlength无效，如果要限制长度，只能用js，如下,oninput就是html5实时监听的事件,如果输入的是小数，则不加step属性就会成int类型，保留两位小数则step="0.01"，如果step为3，则点击上下箭头的话一个单位是3，效果如下： -->
+        <input type="number" id="numbers" oninput="checkLength(this,5)" step="0.01">
+
+        <input type="submit">
+
+    </form> 
+
+    <script>
+        //console.log(document.getElementById("username")===username);
+
+        console.log(username.validity);
+
+        console.log(search.validity);
+
+        console.log(numbers.validity);
+
+        function checkLength(obj,length) {
+            if(obj.value>length) {
+                obj.value=obj.value.substr(0,length);
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
